@@ -31,6 +31,8 @@ int _printf(const char *str, ...)
 				case 'i':
 					_putnum(va_arg(ap, int));
 					break;
+				default:
+					break;
 			}
 		}
 		else
