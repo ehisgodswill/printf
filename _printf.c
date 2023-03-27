@@ -13,6 +13,7 @@ int _printf(const char *str, ...)
 	va_list ap;
 
 	va_start(ap, str);
+	lent = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%')
@@ -21,6 +22,7 @@ int _printf(const char *str, ...)
 			switch (str[i++])
 			{
 				case 'c':
+					_putchar(va_arg(ap, char));
 					break;
 				case 's':
 					break;
