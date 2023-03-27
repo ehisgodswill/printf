@@ -3,7 +3,7 @@
 
 /**
  * _printf - a function similar to printf
- * @*str - string to print
+ * @str - string to print
  * Return: length of the string
 */
 int _printf(const char *str, ...)

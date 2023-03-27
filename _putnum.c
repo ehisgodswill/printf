@@ -3,7 +3,7 @@
 /**
  * _putnum - writes the number n to stdout
  * @n: The number to print
- * @*lp: pointer to string length
+ * @lp: pointer to string length
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
