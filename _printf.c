@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include "main.h"
-int lent = 0;
 
 /**
  * _printf - a function similar to printf
@@ -9,11 +8,11 @@ int lent = 0;
 */
 int _printf(const char *str, ...)
 {
-	unsigned short i;
+	unsigned short i = 0;
 	va_list ap;
+	int lent = 0;
 
 	va_start(ap, str);
-	lent = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] == '%')
@@ -43,10 +42,7 @@ int _printf(const char *str, ...)
 			}
 		}
 		else
-		{
-			_putchar(str[i]);
-			i++;
-		}
+			_putchar(str[i++]);
 	}
 	va_end(ap);
 	return (lent);
