@@ -3,21 +3,21 @@
 
 /**
  * _printf - a function similar to printf
- * string - string to print
+ * str - string to print
  * Return: length of the string
 */
-int _printf(const char *string, ...)
+int _printf(const char *str, ...)
 {
 	unsigned short i;
 	va_list ap;
 
-	va_start(ap, string);
-	while(string[i] != '\0')
+	va_start(ap, str);
+	while(str[i] != '\0')
 	{
-		if(string[i] == '%')
+		if(str[i] == '%')
 		{
 			i++;
-			switch(string[i++])
+			switch(str[i++])
 			{
 				case 'c':
 					break;
@@ -34,7 +34,7 @@ int _printf(const char *string, ...)
 		}
 		else
 		{
-			_putchar(string[i]);
+			_putchar(str[i]);
 			i++;
 		}
 	}
