@@ -10,6 +10,7 @@
 int _putnum(int n)
 {
 	int r = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -17,8 +18,8 @@ int _putnum(int n)
 	}
 	if (n > 9)
 	{
-		_putnum(n/10);
+		_putnum(n / 10);
 	}
-	r = _putchar((n%10) + '0');
+	r = _putchar((n % 10) + '0');
 	return (r);
 }

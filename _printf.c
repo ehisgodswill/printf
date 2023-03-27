@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
+int lent = 0;
 
 /**
  * _printf - a function similar to printf
@@ -12,12 +13,12 @@ int _printf(const char *str, ...)
 	va_list ap;
 
 	va_start(ap, str);
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if(str[i] == '%')
+		if (str[i] == '%')
 		{
 			i++;
-			switch(str[i++])
+			switch (str[i++])
 			{
 				case 'c':
 					break;
@@ -39,5 +40,5 @@ int _printf(const char *str, ...)
 		}
 	}
 	va_end(ap);
-	return (len);
+	return (lent);
 }
