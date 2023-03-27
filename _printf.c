@@ -38,7 +38,7 @@ int _printf(const char *str, ...)
 		}
 		else
 		{
-			_putchar(str[i]);
+			_putchar(str[i], lp);
 			i++;
 		}
 	}

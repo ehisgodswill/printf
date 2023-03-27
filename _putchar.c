@@ -11,6 +11,6 @@
  */
 int _putchar(char c, int *lp)
 {
-	*lp++;
+	*lp = *lp + 1;
 	return (write(1, &c, 1));
 }
