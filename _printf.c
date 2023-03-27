@@ -32,6 +32,7 @@ int _printf(const char *str, ...)
 					_putnum(va_arg(ap, int));
 					break;
 				default:
+					_putchar(str[i - 1]);
 					break;
 			}
 		}
