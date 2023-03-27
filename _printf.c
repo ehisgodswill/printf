@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include "main.h"
-int lent = 0;
 
 /**
  * _printf - a function similar to printf
@@ -11,6 +10,8 @@ int _printf(const char *str, ...)
 {
 	unsigned short i;
 	va_list ap;
+	int lent = 0;
+	int *lp = &lent;
 
 	va_start(ap, str);
 	while (str[i] != '\0')
@@ -25,11 +26,11 @@ int _printf(const char *str, ...)
 				case 's':
 					break;
 				case '%':
-					_putchar('%');
+					_putchar('%', lp);
 					break;
 				case 'd':
 				case 'i':
-					_putnum(va_arg(ap, int));
+					_putnum(va_arg(ap, int), lp);
 					break;
 				default:
 					break;
