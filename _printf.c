@@ -22,7 +22,7 @@ int _printf(const char *str, ...)
 			switch (str[i++])
 			{
 				case 'c':
-					_putchar(va_arg(ap, char));
+					_putchar(va_arg(ap, int));
 					break;
 				case 's':
 					break;
