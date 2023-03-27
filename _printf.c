@@ -33,6 +33,9 @@ int _printf(const char *str, ...)
 				case 'i':
 					_putnum(va_arg(ap, int));
 					break;
+				case 'b':
+					_putbin(va_arg(ap, int));
+					break;
 				default:
 					_putchar('%');
 					_putchar(str[i - 1]);
