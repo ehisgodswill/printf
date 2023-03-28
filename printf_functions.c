@@ -32,6 +32,7 @@ int _putstr(int s, int *lp)
 	{
 		_putchar(s[i++], lp);
 	}
+	return (1);
 */
 }
 
@@ -45,7 +46,8 @@ int _putstr(int s, int *lp)
  */
 int _putperc(int c, int *lp)
 {
-	_putchar('%', lp);
+	c + 1;
+	return (_putchar('%', lp));
 }
 
 /**
