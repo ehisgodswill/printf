@@ -31,11 +31,15 @@ int _printf(const char *str, ...)
 			/*else if (str[i] == 's'){stg = va_arg(ap, char *);*/
 			/* func((int)&stg, lp);}*/
 			else
+			{
 				func(va_arg(ap, int), lp);
+			}
 			i++;
 		}
 		else
+		{
 			_putchar(str[i++], lp);
+		}
 	}
 	va_end(ap);
 	return (lent);
