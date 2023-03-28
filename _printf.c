@@ -28,8 +28,8 @@ int _printf(const char *str, ...)
 				_putchar('%', lp);
 				_putchar(str[i], lp);
 			}
-			/**else if (str[i] == 's'){stg = va_arg(ap, char *);
-			 * func((int)&stg, lp);}*/
+			/*else if (str[i] == 's'){stg = va_arg(ap, char *);*/
+			/* func((int)&stg, lp);}*/
 			else
 				func(va_arg(ap, int), lp);
 			i++;
