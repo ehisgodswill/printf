@@ -27,10 +27,7 @@ int _putchar(int c, int *lp)
  * {
  * char *str = s;
  * int i = 0;
- * while (str[i] != '\0')
- * {
- * 	_putchar(s[i++], lp);
- * }
+ * while (str[i] != '\0'){_putchar(s[i++], lp);}
  * return (1);
  * }*/
 
