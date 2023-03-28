@@ -16,11 +16,11 @@ int (*getfunction(char s))(int, int *)
 		{'d', _putnum},
 		{'i', _putnum},
 		{'b', _putbin},
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 	int i = 0;
 
-	while (i < 7)
+	while (ops[i].op != '\0')
 	{
 		if ((ops[i]).op == s)
 			return (ops[i].f);

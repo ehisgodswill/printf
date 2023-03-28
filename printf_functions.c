@@ -9,7 +9,7 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c, int *lp)
+int _putchar(int c, int *lp)
 {
 	*lp = *lp + 1;
 	return (write(1, &c, 1));
@@ -24,6 +24,7 @@ int _putchar(char c, int *lp)
  */
 int _putstr(int s, int *lp)
 {
+	/*
 	char *str = s;
 	int i = 0;
 
@@ -31,6 +32,7 @@ int _putstr(int s, int *lp)
 	{
 		_putchar(s[i++], lp);
 	}
+*/
 }
 
 /**
@@ -41,7 +43,7 @@ int _putstr(int s, int *lp)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putperc(char c, int *lp)
+int _putperc(int c, int *lp)
 {
 	_putchar('%', lp);
 }
