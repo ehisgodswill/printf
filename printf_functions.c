@@ -4,6 +4,7 @@
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
+ * @lp: length pointer
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -16,6 +17,7 @@ int _putchar(char c, int *lp)
 /**
  * _putstr - writes the string s to stdout
  * @s: The string to print
+ * @lp: length pointer
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -24,7 +26,8 @@ int _putstr(int s, int *lp)
 {
 	char *str = s;
 	int i = 0;
-	while(str[i] != '\0')
+
+	while (str[i] != '\0')
 	{
 		_putchar(s[i++], lp);
 	}
@@ -33,6 +36,7 @@ int _putstr(int s, int *lp)
 /**
  * _putperc - writes the character % to stdout
  * @c: The character to print
+ * @lp: length pointer
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -45,6 +49,7 @@ int _putperc(char c, int *lp)
 /**
  * _putnum - writes the number n to stdout
  * @n: The number to print
+ * @lp: length pointer
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
@@ -69,6 +74,7 @@ int _putnum(int n, int *lp)
 /**
  * _putbin - converts to binary and writes the number n to stdout
  * @n: The number to print
+ * @lp: length pointer
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.

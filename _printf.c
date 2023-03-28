@@ -5,8 +5,6 @@
  * _printf - a function similar to printf
  * @str: string to print
  * Return: length of the string
- * 
- * REWRITE THIS PRINTF UNCTION TO USE THE FUNCTION POINTER
 */
 int _printf(const char *str, ...)
 {
