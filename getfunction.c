@@ -10,7 +10,7 @@
 int (*getfunction(char s))(int, int *)
 {
 	op_t ops[] = {
-		{'s', _putstr},
+		/* {'s', _putstr},*/
 		{'c', _putchar},
 		{'%', _putperc},
 		{'d', _putnum},

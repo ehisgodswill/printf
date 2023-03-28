@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stddef.h>
 #include "main.h"
 
 /**
@@ -30,7 +31,7 @@ int _printf(const char *str, ...)
 			else if (str[i] == 's')
 			{
 				stg = va_arg(ap, char *);
-				func(&stg, lp);
+				func((int)&stg, lp);
 			}
 			else
 				func(va_arg(ap, int), lp);

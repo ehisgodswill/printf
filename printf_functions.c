@@ -22,9 +22,9 @@ int _putchar(int c, int *lp)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putstr(int s, int *lp)
+/*int _putstr(int s, int *lp)
 {
-	/*
+	
 	char *str = s;
 	int i = 0;
 
@@ -33,8 +33,8 @@ int _putstr(int s, int *lp)
 		_putchar(s[i++], lp);
 	}
 	return (1);
-*/
-}
+
+}*/
 
 /**
  * _putperc - writes the character % to stdout
@@ -46,7 +46,7 @@ int _putstr(int s, int *lp)
  */
 int _putperc(int c, int *lp)
 {
-	c + 1;
+	c++;
 	return (_putchar('%', lp));
 }
 
