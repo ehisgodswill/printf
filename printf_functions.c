@@ -8,20 +8,38 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+int _putchar(char c, int *lp)
 {
+	*lp = *lp + 1;
 	return (write(1, &c, 1));
 }
 /**
- * _putchar - writes the character c to stdout
+ * _putstr - writes the string s to stdout
+ * @s: The string to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putstr(int s, int *lp)
+{
+	char *str = s;
+	int i = 0;
+	while(str[i] != '\0')
+	{
+		_putchar(s[i++], lp);
+	}
+}
+
+/**
+ * _putperc - writes the character % to stdout
  * @c: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putperc(char c)
+int _putperc(char c, int *lp)
 {
-	return (write(1, &c, 1));
+	_putchar('%', lp);
 }
 
 /**
@@ -31,20 +49,20 @@ int _putperc(char c)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putnum(int n)
+int _putnum(int n, int *lp)
 {
 	int r = 0;
 
 	if (n < 0)
 	{
-		_putchar('-');
+		_putchar('-', lp);
 		n = -n;
 	}
 	if (n > 9)
 	{
-		_putnum(n / 10);
+		_putnum(n / 10, lp);
 	}
-	r = _putchar((n % 10) + '0');
+	r = _putchar((n % 10) + '0', lp);
 	return (r);
 }
 
@@ -55,17 +73,17 @@ int _putnum(int n)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putbin(int n)
+int _putbin(int n, int *lp)
 {
 	short binaryNum[32], i = 0, j = 0, r;
 
 	if (n < 0)
 	{
-		_putchar('-');
+		_putchar('-', lp);
 		n = -n;
 	}
 	if (n == 0)
-		_putchar('0');
+		_putchar('0', lp);
 	while (n > 0)
 	{
 		binaryNum[i++] = n % 2;
@@ -73,6 +91,6 @@ int _putbin(int n)
 	}
 
 	for (j = i - 1; j >= 0; j--)
-		r = _putchar('0' + binaryNum[j]);
+		r = _putchar('0' + binaryNum[j], lp);
 	return (r);
 }

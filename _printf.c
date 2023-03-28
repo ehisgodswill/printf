@@ -13,6 +13,9 @@ int _printf(const char *str, ...)
 	unsigned short i = 0;
 	va_list ap;
 	int lent = 0;
+	int *lp = &lent;
+	int (*func)(int, int *);
+	char *stg;
 
 	va_start(ap, str);
 	while (str != NULL && str[i] != '\0')
@@ -20,31 +23,23 @@ int _printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
-			switch (str[i++])
+			func = getfunction(str[i]);
+			if (func == NULL)
 			{
-				case 'c':
-					_putchar(va_arg(ap, int));
-					break;
-				case 's':
-					break;
-				case '%':
-					_putchar('%');
-					break;
-				case 'd':
-				case 'i':
-					_putnum(va_arg(ap, int));
-					break;
-				case 'b':
-					_putbin(va_arg(ap, int));
-					break;
-				default:
-					_putchar('%');
-					_putchar(str[i - 1]);
-					break;
+				_putchar('%', lp);
+				_putchar(str[i], lp);
 			}
+			else if (str[i] == 's')
+			{
+				stg = va_arg(ap, char *);
+				func(&stg, lp);
+			}
+			else
+				func(va_arg(ap, int), lp);
+			i++;
 		}
 		else
-			_putchar(str[i++]);
+			_putchar(str[i++], lp);
 	}
 	va_end(ap);
 	return (lent);
