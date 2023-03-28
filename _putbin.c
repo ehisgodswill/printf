@@ -13,7 +13,7 @@ int _putbin(int n)
 
 	if (n < 0)
 	{
-		_putchar(' - ');
+		_putchar('-');
 		n = -n;
 	}
 	if (n == 0)
@@ -24,7 +24,7 @@ int _putbin(int n)
 		n /= 2;
 	}
 
-	for (j = i-1; j >= 0; j--)
+	for (j = i - 1; j >= 0; j--)
 		r = _putchar('0' + binaryNum[j]);
 	return (r);
 }
