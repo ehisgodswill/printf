@@ -30,7 +30,7 @@ int _putchar(int c, int *lp)
  * while (str[i] != '\0'){_putchar(s[i++], lp);}
  * return (1);
  * }
-*/
+ */
 
 /**
  * _putperc - writes the character % to stdout
