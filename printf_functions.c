@@ -26,7 +26,7 @@ int _putchar(int c, int *lp)
 int _putstr(char *s, int *lp)
 {
 	int i = 0;
-	
+
 	while (s[i] != '\0')
 	{
 		_putchar(s[i++], lp);
