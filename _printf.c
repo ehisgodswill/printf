@@ -30,11 +30,15 @@ int _printf(const char *str, ...)
 				_putchar(str[i], lp);
 			}
 			else
+			{
 				func(va_arg(ap, int), lp);
+			}
 			i++;
 		}
 		else
+		{
 			_putchar(str[i++], lp);
+		}
 	}
 	va_end(ap);
 	return (lent);
