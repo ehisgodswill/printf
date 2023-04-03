@@ -5,6 +5,10 @@ int _putstr(char *, int *lp);
 int _putnum(int n, int *lp);
 int _putperc(int c, int *lp);
 int _putbin(int n, int *lp);
+int _putunsi(int, int *lp);
+int _putoct(int, int *lp);
+int _puthex(int, int *lp);
+int _putChex(int, int *lp);
 int (*getfunction(char s))(int, int *);
 int _printf(const char *string, ...);
 /**

@@ -102,3 +102,18 @@ int _putbin(int n, int *lp)
 		r = _putchar('0' + binaryNum[j], lp);
 	return (r);
 }
+
+/**
+ * _putunsi - writes the character % to stdout
+ * @c: The character to print
+ * @lp: length pointer
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putunsi(int c, int *lp)
+{
+	c = (unsigned int)c;
+	return (_putnum(c, lp));
+}
+

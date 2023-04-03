@@ -17,6 +17,10 @@ int (*getfunction(char s))(int, int *)
 		{'d', _putnum},
 		{'i', _putnum},
 		{'b', _putbin},
+		{'u', _putunsi},
+		{'o', _putoct},
+		{'x', _puthex},
+		{'X', _putChex},
 		{'\0', NULL}
 	};
 	int i = 0;
